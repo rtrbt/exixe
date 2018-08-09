@@ -74,6 +74,11 @@ void exixe::show_digit(unsigned char digit, unsigned char brightness, unsigned c
   spi_write();
 }
 
+void exixe::show_symbol(symbol symb, unsigned char brightness, unsigned char overdrive)
+{
+    show_digit(symb, brightness, overdrive);
+}
+
 void exixe::set_led(unsigned char red, unsigned char green, unsigned char blue)
 {
   // cap brightness to 127
